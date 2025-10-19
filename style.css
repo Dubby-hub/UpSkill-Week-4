@@ -36,10 +36,10 @@ nav {
         font-size: 20px;
     }
     .navlinks a:hover{
-        color: #fa3e05;
+        color: #01a378;
     }
-    .active{
-        color: #fa3e05;
+    .active a{
+        color: #01a378; 
     }
    
     /* About me section*/
@@ -50,6 +50,11 @@ nav {
       justify-content: center;
      
     }
+    .Aboutme:hover img{
+        transform: scale(1.1) rotate(3deg);
+      box-shadow: 0 0 40px 10px rgba(255,255,255,0.4);
+    }
+    
     .column h3{
 color: rgb(1, 41, 43);
 }
@@ -63,13 +68,15 @@ color: rgb(1, 41, 43);
   
 }
 .column button:hover{
-  color: #fa3e05;
+  color: black;
+  background-color: #01a378;
 }
 .column {               
       
       padding: 20px;
       border-radius: 10px;
       box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+      background-color: rgb(248, 244, 238);
     }
     figure img {
       max-width: 100%;
@@ -86,7 +93,7 @@ color: rgb(1, 41, 43);
     .logo{
         font-size: 20px;
     }
-    
+
     /* Project Section*/
 
     .projects h2{
@@ -117,6 +124,12 @@ color: rgb(1, 41, 43);
     margin-left: 300px;
     margin-bottom: 5px;
     }
+    .projbtn:hover{
+      background-color: #546862;
+    }
+
+    
+     
 
     /* contact section */
 
@@ -145,8 +158,8 @@ color: rgb(1, 41, 43);
       }
 
     .intouch{
-       transition: border-color 0.3s, box-shadow 0.3s; /* Smooth transitions for hover/focus */
-    border: 1px solid #04a16d; /* Primary color border on focus */
+       transition: border-color 0.3s, box-shadow 0.3s;
+    border: 1px solid #04a16d; 
     padding: 5px;
       border-radius: 10px;
       background: transparent;
@@ -200,10 +213,16 @@ input{
     transition: background-color 0.3s, transform 0.1s;
     margin-top: 10px;
 }
+button[type="submit"]:hover{
+  background-color: #fa3e05;
+}
 textarea{
   transition: border-color 0.3s, box-shadow 0.3s; 
     border: 1px solid  #04a16d; 
     border-radius: 5px;
+}
+.box:hover{
+  animation: pulseGlow 2s infinite;
 }
 
 
@@ -225,15 +244,46 @@ footer{
   text-decoration: none;
   color: white;
 }
+.fta:hover{
+  color: #01a378;
+}
 .copy{
   text-align: center;
   padding-top: 20px;
   color: aquamarine;
 }
+@keyframes pulseGlow {
+      0% {background-color: #01a378;
+        color: #010f0d; }
+      50% {  background-color: #02aa8e;
+        color:#fff; }
+      100% { background-color: rgb(1, 41, 43);
+        color: #fff; }
+    }
 
+    .image-container:hover {
+      animation: pulseGlow 2s infinite;
+    }
+    
+
+@keyframes colorShift {
+      0% {
+        background-color: #01a378;
+        color: #010f0d;
+      }
+      50% {
+        background-color: #02aa8e;
+        color:#fff;
+      }
+      100% {
+        background-color: rgb(1, 41, 43);
+        color: #fff;
+      }
+    }
 @media screen and (max-width: 768px) {
   body {
     font-size: 14px;
+    background-color: #e7f8f8;
   }
 .navlinks{
   display: none;
@@ -246,7 +296,7 @@ header{
     position: sticky;
     top: 0;
     z-index: 1000;
-    height: 100px;
+   height: 50px;
 }
 nav {
       display: flex;
@@ -270,12 +320,13 @@ nav {
         flex-direction: column;
         gap: 20px;            
       justify-content: center;
+      padding-top: 0;
      
     }
     .me{
       justify-content: center;
       align-items: center;
-      margin-left: 40px;
+      
     
     }
     .column h3{
@@ -285,7 +336,7 @@ color: rgb(1, 41, 43);
   cursor: pointer;
   color:white;
   height: 40px;
-  width: 20%;
+  width: 40%;
   border-radius: 5px;
   background-color: rgb(1, 41, 43);
   
@@ -305,10 +356,8 @@ color: rgb(1, 41, 43);
     }
 
     figcaption {
-      margin-top: 10px;
       font-size: 14px;
       color: rgb(112, 112, 111);
-      padding: 10px;
      
     }
  
@@ -325,14 +374,18 @@ color: rgb(1, 41, 43);
     }
     .projfig{
       height: 300px;
-      width: 80%;
+      width: 100%;
      
     }
      .projimg{
       height: 180px;
       width: 100%;
      }
-    
+    .lastp{
+      font-size: small;
+      padding-bottom: 0;
+      padding-top: 0;
+    }
     .projbtn{
   width: 30%;
     margin-left: 200px;
@@ -345,8 +398,36 @@ color: rgb(1, 41, 43);
       flex-direction: column;
       justify-content: center;
       align-items: center;
+
+      display: flex;
+      gap: 30px;
+      width: 100%;
+      margin: 0;
+      
     }
+    .intouch{
+      width: 100%; 
+    padding-top: 10px;
+      border-radius: 10px;
+      margin-top: 30px;
+      margin-left: 0;
+       animation: colorShift 5s infinite alternate ease-in-out;
+    }
+    .intouch:hover{
+       border-color: #ff7300;
+     
+    }
+  form{
+   
+    padding: 20px;
+    display: flex;
+    flex-direction: column;
+    gap: 20px;
+   }
+  .box{
   
+    margin: 0;
+  }
 
     .contact{
       width: 80%;
@@ -356,11 +437,13 @@ color: rgb(1, 41, 43);
           width: 80%;
       height: 200px;
       }
-
+textarea{
+ 
+    width: 100%;
+}
  button[type="submit"] {
-    width: 50%;
-    padding: 12px;
-    margin-left: 30px;
+    width: 100%;
+   
 }
 
 /* footer section on mobile */
@@ -372,5 +455,9 @@ color: rgb(1, 41, 43);
   gap: 40px;
  justify-content: center;
  align-items: center;
+}
+.ftdiv{
+  justify-content: center;
+  align-items: center;
 }
 }
