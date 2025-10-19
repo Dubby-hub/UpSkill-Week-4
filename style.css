@@ -80,7 +80,7 @@ color: rgb(1, 41, 43);
     figure img {
       max-width: 100%;
       border-radius: 8px;
-      animation: fadeIn 2s ease-in-out forwards;
+      
     }
 
     figcaption {
@@ -110,6 +110,10 @@ color: rgb(1, 41, 43);
       background-color: rgb(1, 41, 43);
       border-radius: 20px;
      
+    }
+    .projfig:hover{
+      animation: fadeIn 2s ease-in-out forwards;
+
     }
      p, button{
       padding: 5px;
@@ -254,7 +258,8 @@ footer{
 }
 @keyframes fadeIn {
       0% {
-        opacity: 0;
+        background-color: #546862;
+        opacity: 0.3;
         transform: translateY(30px);
       }
       100% {
