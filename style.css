@@ -50,10 +50,9 @@ nav {
       justify-content: center;
      
     }
-    .Aboutme:hover img{
-        transform: scale(1.1) rotate(3deg);
-      box-shadow: 0 0 40px 10px rgba(255,255,255,0.4);
-    }
+   .Aboutme{
+     animation: fadeIn 2s ease-in-out forwards;
+   }
     
     .column h3{
 color: rgb(1, 41, 43);
@@ -81,6 +80,7 @@ color: rgb(1, 41, 43);
     figure img {
       max-width: 100%;
       border-radius: 8px;
+      animation: fadeIn 2s ease-in-out forwards;
     }
 
     figcaption {
@@ -252,6 +252,18 @@ footer{
   padding-top: 20px;
   color: aquamarine;
 }
+@keyframes fadeIn {
+      0% {
+        opacity: 0;
+        transform: translateY(30px);
+      }
+      100% {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+
+
 @keyframes pulseGlow {
       0% {background-color: #01a378;
         color: #010f0d; }
